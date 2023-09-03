@@ -15,7 +15,7 @@
                     <div class="col">
                         <div  class="d-flex align-items-center gap-3">
                             <div>
-                                <button class="menu-toggle-btn">
+                                <button class="menu-open-btn">
                                     <i class="ph ph-list"></i>
                                 </button>
                             </div>
@@ -26,7 +26,7 @@
                         </div>
                     </div>
 
-                    <div class="col">
+                    <div class="col d-lg-none search-bar">
                         <div class="d-flex align-items-center gap-3">
                             <div class="input-group">
                                 <input type="text" class="search-input" name="search" id="search" placeholder="search" />
@@ -36,33 +36,64 @@
                                 </button>
                             </div>
                                 
-                            <div>
-                                <button class="btn btn-circle" title="Search with your voice">
-                                    <i class="ph ph-microphone"></i>
+                            <div class="d-none d-lg-block">
+                                <button class="btn btn-circle" title="Close" onclick="document.querySelector('.search-bar').classList.remove('show')">
+                                    <i class="ph ph-x"></i>
                                 </button>
                             </div>
+
+                            <div>
+                              <button class="btn btn-circle" title="Search with your voice">
+                                  <i class="ph ph-microphone"></i>
+                              </button>
+                          </div>
                         </div>
                     </div>
 
                     <div class="col">
                         <div class="d-flex align-items-center gap-3">
-
-                            <div>
-                                <button class="btn btn-circle bg-transparent" title="Video">
-                                    <i class="ph ph-video-camera"></i>
+                            <div class="d-none d-lg-block">
+                                <button class="btn btn-circle bg-transparent" onclick="document.querySelector('.search-bar').classList.add('show')" title="search">
+                                    <i class="ph ph-magnifying-glass"></i>
                                 </button>
                             </div>
 
-                            <div>
+                            <div class="d-xs-none">
+                              <button class="btn btn-circle bg-transparent" title="Video">
+                                  <i class="ph ph-video-camera"></i>
+                              </button>
+                          </div>
+
+                            <div class="d-xs-none">
                                 <button class="btn btn-circle bg-transparent" title="Notification">
                                     <i class="ph ph-bell"></i>
                                 </button>
                             </div>
 
-                            <div>
-                                <button class="btn btn-circle bg-transparent" title="Profile">
+                            <div class="dropdown">
+                                <button class="btn btn-circle bg-transparent dropdown-toggle" title="Profile">
                                     <i class="ph ph-user"></i>
                                 </button>
+                                
+
+                                  <ul class="dropdown-menu">
+                                    <li class="dropdown-item">
+                                      <a class="dropdown-link" href="">Login</a>
+                                    </li>
+
+                                    <li class="dropdown-item">
+                                      <a class="dropdown-link" href="">Register</a>
+                                    </li>
+
+                                    <li class="dropdown-item d-none d-xs-block">
+                                      <a class="dropdown-link" href="">Create Video</a>
+                                    </li>
+
+                                    <li class="dropdown-item d-none d-xs-block">
+                                      <a class="dropdown-link" href="">Notifications</a>
+                                    </li>
+                                  </ul>
+
                             </div>
                     </div>
                 </div>
@@ -71,6 +102,10 @@
 
         <aside>
             <div class="sidebar">
+              <button class="menu-close-btn">
+                <i class="ph ph-x"></i>
+            </button>
+
                 <ul class="sidebar-menu overflow-y-scroll">
                     <li class="sidebar-menu-item">
                       <a href="#" class="sidebar-menu-link active">
@@ -185,11 +220,12 @@
                     </a>
                   </li>
 
-                  <hr />
 
-                  <div class="text">
-                    Subscription
-                  </div>
+                  <li class="sidebar-menu-divider"></li>
+
+                  <li class="sidebar-menu-heading">
+                    Subcription
+                  </li>
 
                   <li class="sidebar-menu-item">
                     <a href="#" class="sidebar-menu-link">
@@ -219,11 +255,12 @@
                     </a>
                   </li>
 
-                  <hr />
 
-                  <div class="text">
+                  <li class="sidebar-menu-divider"></li>
+
+                  <li class="sidebar-menu-heading">
                     Explore
-                  </div>
+                  </li>
 
                   <li class="sidebar-menu-item">
                     <a href="#" class="sidebar-menu-link">
@@ -370,7 +407,7 @@
         </aside>
 
         <main class="main">
-            <section class="categories-section px-3">
+            <section class="categories-section py-3">
                 <div class="d-flex align-items-center gap-3 overflow-x-scroll">
                     <a href="#" class="btn btn-secondary active">All</a>
                     <a href="#" class="btn btn-secondary">Mixes</a>
@@ -402,7 +439,7 @@
             </section>
 
             <section class="videos-section px-3 mt-5">
-                <div class="d-flex flex-wrap align-items-center gap-3">
+                <div class="d-grid grid-cols-4 grid-cols-xl-3 grid-cols-lg-2 grid-cols-md-1 gap-3">
                     <div class="card">
                         <div class="card-img">
                             <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
@@ -457,7 +494,61 @@
                     </div>
                 </div>
 
+                  <div class="card">
+                    <div class="card-img">
+                        <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
+                    </div>
+                    
+                    <div class="d-flex gap-3">
+                        <div class="card-user-img">
+                            <img src="./assets/images/channels4_profile.jpg" alt="image" />
+                        </div>
+
+                        <div>
+                            <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
+                            <div class="card-sub-title">FORMULA 1</div>
+                            <div class="card-meta">1m views . 1 month ago</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card">
+                  <div class="card-img">
+                      <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
+                  </div>
+                  
+                  <div class="d-flex gap-3">
+                      <div class="card-user-img">
+                          <img src="./assets/images/channels4_profile.jpg" alt="image" />
+                      </div>
+
+                      <div>
+                          <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
+                          <div class="card-sub-title">FORMULA 1</div>
+                          <div class="card-meta">1m views . 1 month ago</div>
+                      </div>
+                  </div>
+               </div>
+
+              <div class="card">
+                <div class="card-img">
+                    <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
+                </div>
+                
+                <div class="d-flex gap-3">
+                    <div class="card-user-img">
+                        <img src="./assets/images/channels4_profile.jpg" alt="image" />
+                    </div>
+
+                    <div>
+                        <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
+                        <div class="card-sub-title">FORMULA 1</div>
+                        <div class="card-meta">1m views . 1 month ago</div>
+                    </div>
+                </div>
+             </div>
+
+               <div class="card">
                   <div class="card-img">
                       <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
                   </div>
@@ -511,6 +602,42 @@
               </div>
           </div>
 
+            <div class="card">
+              <div class="card-img">
+                  <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
+              </div>
+              
+              <div class="d-flex gap-3">
+                  <div class="card-user-img">
+                      <img src="./assets/images/channels4_profile.jpg" alt="image" />
+                  </div>
+
+                  <div>
+                      <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
+                      <div class="card-sub-title">FORMULA 1</div>
+                      <div class="card-meta">1m views . 1 month ago</div>
+                  </div>
+              </div>
+          </div>
+
+            <div class="card">
+              <div class="card-img">
+                  <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
+              </div>
+              
+              <div class="d-flex gap-3">
+                  <div class="card-user-img">
+                      <img src="./assets/images/channels4_profile.jpg" alt="image" />
+                  </div>
+
+                  <div>
+                      <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
+                      <div class="card-sub-title">FORMULA 1</div>
+                      <div class="card-meta">1m views . 1 month ago</div>
+                  </div>
+              </div>
+          </div>
+
           <div class="card">
             <div class="card-img">
                 <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
@@ -527,176 +654,86 @@
                     <div class="card-meta">1m views . 1 month ago</div>
                 </div>
             </div>
-        </div>
-
-        <div class="card">
-          <div class="card-img">
-              <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
           </div>
-          
-          <div class="d-flex gap-3">
-              <div class="card-user-img">
-                  <img src="./assets/images/channels4_profile.jpg" alt="image" />
-              </div>
 
-              <div>
-                  <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
-                  <div class="card-sub-title">FORMULA 1</div>
-                  <div class="card-meta">1m views . 1 month ago</div>
-              </div>
-          </div>
-      </div>
-
-      <div class="card">
-        <div class="card-img">
-            <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
-        </div>
-        
-        <div class="d-flex gap-3">
-            <div class="card-user-img">
-                <img src="./assets/images/channels4_profile.jpg" alt="image" />
+          <div class="card">
+            <div class="card-img">
+                <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
             </div>
+            
+            <div class="d-flex gap-3">
+                <div class="card-user-img">
+                    <img src="./assets/images/channels4_profile.jpg" alt="image" />
+                </div>
 
-            <div>
-                <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
-                <div class="card-sub-title">FORMULA 1</div>
-                <div class="card-meta">1m views . 1 month ago</div>
+                <div>
+                    <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
+                    <div class="card-sub-title">FORMULA 1</div>
+                    <div class="card-meta">1m views . 1 month ago</div>
+                </div>
             </div>
-        </div>
-    </div>
+          </div>
 
-      <div class="card">
-        <div class="card-img">
-            <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
-        </div>
-        
-        <div class="d-flex gap-3">
-            <div class="card-user-img">
-                <img src="./assets/images/channels4_profile.jpg" alt="image" />
+          <div class="card">
+            <div class="card-img">
+                <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
             </div>
+            
+            <div class="d-flex gap-3">
+                <div class="card-user-img">
+                    <img src="./assets/images/channels4_profile.jpg" alt="image" />
+                </div>
 
-            <div>
-                <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
-                <div class="card-sub-title">FORMULA 1</div>
-                <div class="card-meta">1m views . 1 month ago</div>
+                <div>
+                    <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
+                    <div class="card-sub-title">FORMULA 1</div>
+                    <div class="card-meta">1m views . 1 month ago</div>
+                </div>
             </div>
-        </div>
-    </div>
+          </div>
 
-      <div class="card">
-        <div class="card-img">
-            <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
-        </div>
-        
-        <div class="d-flex gap-3">
-            <div class="card-user-img">
-                <img src="./assets/images/channels4_profile.jpg" alt="image" />
+          <div class="card">
+            <div class="card-img">
+                <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
             </div>
+            
+            <div class="d-flex gap-3">
+                <div class="card-user-img">
+                    <img src="./assets/images/channels4_profile.jpg" alt="image" />
+                </div>
 
-            <div>
-                <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
-                <div class="card-sub-title">FORMULA 1</div>
-                <div class="card-meta">1m views . 1 month ago</div>
+                <div>
+                    <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
+                    <div class="card-sub-title">FORMULA 1</div>
+                    <div class="card-meta">1m views . 1 month ago</div>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <div class="card">
-      <div class="card-img">
-          <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
-      </div>
-      
-      <div class="d-flex gap-3">
-          <div class="card-user-img">
-              <img src="./assets/images/channels4_profile.jpg" alt="image" />
           </div>
 
-          <div>
-              <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
-              <div class="card-sub-title">FORMULA 1</div>
-              <div class="card-meta">1m views . 1 month ago</div>
-          </div>
-      </div>
-    </div>
+          <div class="card">
+            <div class="card-img">
+                <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
+            </div>
+            
+            <div class="d-flex gap-3">
+                <div class="card-user-img">
+                    <img src="./assets/images/channels4_profile.jpg" alt="image" />
+                </div>
 
-    <div class="card">
-      <div class="card-img">
-          <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
-      </div>
-      
-      <div class="d-flex gap-3">
-          <div class="card-user-img">
-              <img src="./assets/images/channels4_profile.jpg" alt="image" />
+                <div>
+                    <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
+                    <div class="card-sub-title">FORMULA 1</div>
+                    <div class="card-meta">1m views . 1 month ago</div>
+                </div>
+            </div>
           </div>
-
-          <div>
-              <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
-              <div class="card-sub-title">FORMULA 1</div>
-              <div class="card-meta">1m views . 1 month ago</div>
-          </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-img">
-          <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
-      </div>
-      
-      <div class="d-flex gap-3">
-          <div class="card-user-img">
-              <img src="./assets/images/channels4_profile.jpg" alt="image" />
-          </div>
-
-          <div>
-              <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
-              <div class="card-sub-title">FORMULA 1</div>
-              <div class="card-meta">1m views . 1 month ago</div>
-          </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-img">
-          <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
-      </div>
-      
-      <div class="d-flex gap-3">
-          <div class="card-user-img">
-              <img src="./assets/images/channels4_profile.jpg" alt="image" />
-          </div>
-
-          <div>
-              <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
-              <div class="card-sub-title">FORMULA 1</div>
-              <div class="card-meta">1m views . 1 month ago</div>
-          </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-img">
-          <img src="./assets/images/0d5c44e5cec5c8b2c3681a7d1e710ebc.jpg" alt="image" />
-      </div>
-      
-      <div class="d-flex gap-3">
-          <div class="card-user-img">
-              <img src="./assets/images/channels4_profile.jpg" alt="image" />
-          </div>
-
-          <div>
-              <div class="card-title">Lewis Hamilton drifts on the Grand Prix | F1 2023</div>
-              <div class="card-sub-title">FORMULA 1</div>
-              <div class="card-meta">1m views . 1 month ago</div>
-          </div>
-      </div>
-    </div>
                 </div>
             </section>
         </main>
 
         <footer class="footer">
           <div class="px-3 my-5">
-            <div class="d-flex justify-content-between p-5 rounded border">
+            <div class="d-flex flex-wrap justify-content-between p-5 rounded border">
 
               <div class="footer-menu">
                   <ul>
@@ -725,5 +762,7 @@
             </div>
 
         </footer>
+
+        <script src="./assets/js/main.js"></script>
     </body>
 </html>
