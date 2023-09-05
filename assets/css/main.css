@@ -3,6 +3,17 @@
     padding: 0;
 }
 
+:root {
+    --sidebar-width: 250px;
+    --bg-color: #000;
+    --color: #eee;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--color);
+}
+
 .container-fluid {
     width: 100%;
 }
@@ -113,8 +124,8 @@
 }
 
 .btn-secondary {
-    background: #eee;
-    color: #000;
+    background: #444;
+    color: #ddd;
     padding: 5px 15px;
     border-radius: 10px;
     font-size: 16px;
@@ -125,8 +136,8 @@
 }
 
 .btn-secondary.active {
-    background: #000;
-    color: #fff;
+    background: #444;
+    color: #555;
 }
 
 .mt-3 {
@@ -177,8 +188,9 @@
     padding: 10px 1px;
     position: fixed;
     z-index: 3;
-    background: #fff;
+    background: #000;
     width: 100%;
+    height: 50px;
 }
 
 .menu-open-btn, .menu-close-btn {
@@ -186,10 +198,12 @@
     border: none;
     outline: none;
     font-size: 25px;
+    color: #ccc;
 }
 
 .logo {
-    width: 140px;
+    width: 180px;
+    padding-bottom: 20px;
 }
 
 .input-group{
@@ -210,10 +224,11 @@
 .search-input {
     width: 450px;
     height: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #444;
     outline: none;
     border-radius: 25px;
     padding: 10px;
+    background: #111;
 }
 
 .search-btn{
@@ -221,8 +236,8 @@
     top: 1px;
     bottom: 1px;
     right: 1px;
-    background: #eee;
-    border-left: 1px solid #ddd;
+    background: #555;
+    border-left: 1px solid #666;
     padding: 10px 25px;
     font-size: 20px;
     border-top-right-radius: 25px;
@@ -230,15 +245,16 @@
 }
 
 .search-btn:hover {
-    background: #f0f0f0;
+    background: #555;
 }
 
 .btn-circle {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #eee;
+    background: #666;
     font-size: 20px;
+    color: #ccc;
 }
 
 .dropdown {
@@ -251,7 +267,7 @@
 
 .dropdown-menu {
     position: absolute;
-    background: #fff;
+    background: #333;
     border-radius: 10px;
     right: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 5);
@@ -279,7 +295,7 @@
     align-items: center;
     gap: 20px;
     padding: 14px 15px;
-    color: #000;
+    color: #ccc;
     text-decoration: none;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
@@ -291,16 +307,16 @@
 }
 
 .btn-circle:hover {
-    background: #ddd !important;
+    background: #444 !important;
 }
 
 .sidebar {
     position: fixed;
     left: 0px;
-    width: 250px;
+    width: var(--sidebar-width);
     height: calc(100vh - 63.91px);
-    background: #fff;
-    border-right: 1px solid #eee;
+    background: #000;
+    border-right: 1px solid #555;
     padding-top: 70px;
     transition: 0.5s;
 }
@@ -345,15 +361,17 @@
 
 .sidebar-menu .sidebar-menu-item .sidebar-menu-link:hover,
 .sidebar-menu .sidebar-menu-item .sidebar-menu-link.active {
-    background: #eee;
+    background: #555;
 }
 
 .sidebar-menu .sidebar-menu-item .sidebar-menu-link .sidebar-menu-icon {
     font-size: 20px;
+    color: #ccc;
 }
 
 .sidebar-menu .sidebar-menu-item .sidebar-menu-link .sidebar-menu-text {
     font-size: 18px;
+    color: #ccc;
 }
 
 .sidebar .menu-close-btn {
@@ -365,7 +383,7 @@
 
 @media screen and (max-width: 768px) {
     .sidebar {
-        margin-left: -250px;
+        margin-left: calc(-1 * var(--sidebar-width));
         z-index: 10;
         padding-top: 30px;
         height: 100vh;
@@ -382,7 +400,7 @@
 
 .main {
     padding-top: 120px;
-    padding-left: 250px;
+    padding-left: var(--sidebar-width);
 }
 
 @media screen and (max-width: 768px) {
@@ -393,11 +411,11 @@
 
 .categories-section {
     position: fixed;
-    left: calc(250px + 15px);
+    left: calc(var(--sidebar-width) + 15px);
     right: 15px;
     top: 70px;
     z-index: 2;
-    background: #fff;
+    background: #000;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -419,14 +437,15 @@
 }
 
 .card .card-user-img img {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 }
 
 .card .card-title {
     font-size: 18px;
     font-weight: bold;
+    color: #ccc;
 }
 
 .card .card-sub-title,
@@ -450,8 +469,9 @@
 
 
 .footer {
-    padding: 400px;
+    padding-left:var(--sidebar-width);
     font-size: 17px;
+    background: #000;
 }
 
 .footer-menu {
@@ -468,7 +488,7 @@
 }
 
 .footer-menu ul li a {
-    color: #000;
+    color: #ccc;
     text-decoration: none;
 }
 
