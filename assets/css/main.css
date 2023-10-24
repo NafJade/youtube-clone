@@ -124,7 +124,7 @@ body {
 }
 
 .btn-secondary {
-    background: #444;
+    background: #333;
     color: #ddd;
     padding: 5px 15px;
     border-radius: 10px;
@@ -136,8 +136,8 @@ body {
 }
 
 .btn-secondary.active {
-    background: #444;
-    color: #555;
+    background: #333;
+    color: #444;
 }
 
 .mt-3 {
@@ -184,6 +184,207 @@ body {
     overflow-x: auto;
 }
 
+/* video */
+
+.main-vid {
+    width: 60%;
+    height: 50%;
+    margin-top: 5%;
+    padding-left: 3%;
+}
+
+.vid-title {
+    padding-left: 3%;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif
+}
+
+.vid-sub-title {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
+    
+}
+
+.vid-sub-no {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
+}
+
+.vid-user-img {
+    padding-left: 3%;
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+.button .vid-sub-title .vid-user-img {
+    display: flex;
+} 
+
+.comment-bar {
+    border-bottom: 1px solid #ccc;
+    width: 58%;
+    height: 50%;
+    background: transparent;
+    margin-top: -3%;
+}
+
+.button {
+    margin-top: 1%;
+    padding-left: 12px;
+    width: 130px;
+    height: 38px;
+    border-radius: 25px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.gap-5 {
+    row-gap: 20px;
+}
+
+.side-vid {
+    padding-left: 1250px;
+    margin-top: -70%;
+}
+
+.side-vid-img {
+    width: 190px;
+    padding-top: 12px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.side-vid-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sv {
+    font-size: 15px;
+    color: #888;
+    font-family: 'Roboto', sans-serif;
+}
+
+.side-vid-text {
+    padding-top: 20px;
+}
+
+.btn-2:hover {
+    background: #555;
+}
+
+.btn-2 {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: #333;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    display: flex;
+    white-space: nowrap;
+    color: #eee;
+    font-size: 25px;
+    margin-top: -2.5%;
+    padding: 15px;
+    border-radius: 25px;
+    height: 38px;
+}
+
+.icon-txt {
+    padding: 10%;
+    font-size: 15px;
+}
+
+.bio {
+    margin-top: 2%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-left: 3%;
+    background: #111;
+    width: 60%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 14px 15px;
+}
+
+.com-gap{
+    padding-top: 12px;
+}
+
+.user-pfp {
+    display: fixed;
+}
+
+.com-user-id {
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.com-icon {
+    font-size: 20px;
+    color: #bbb;
+}
+
+.com-icon-2 {
+    font-size: 20px;
+    color: #bbb;
+}
+
+.com-like {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.com-reply {
+    display: inline-block;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 13px;
+}
+
+.com-time {
+    font-size: 13px;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+}
+
+.mycomments {
+    margin-top: 3%;
+    margin-left: -5px;
+    font-size: 35px;
+    margin-left: -7px;
+}
+
+.comment {
+    padding-left: 50px;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.com-text {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.p-1 {
+    margin-left: 27%;
+    width: 10%;
+}
+
+/* header */
+
 .header {
     padding: 10px 1px;
     position: fixed;
@@ -203,7 +404,8 @@ body {
 
 .logo {
     width: 180px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+    margin-top: -20px;
 }
 
 .input-group{

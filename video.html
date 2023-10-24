@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+    <body>
+        <header class="header">
+            <div class="container-fluid">  
+                <div class="row justify-content-between px-3">
+                    <div class="col">
+                        <div  class="d-flex align-items-center gap-3">
+                            <div>
+                                <button class="menu-open-btn">
+                                    <i class="ph ph-list"></i>
+                                </button>
+                            </div>
+
+                            <div>
+                                <img class="logo" src="./assets/images/YouTubeLogo.png"  alt="logo"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col d-lg-none search-bar">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="input-group">
+                                <input type="text" class="search-input" name="search" id="search" placeholder="search" />
+                                
+                                <button class="btn search-btn">
+                                    <i class="ph ph-magnifying-glass"></i>
+                                </button>
+                            </div>
+                                
+                            <div class="d-none d-lg-block">
+                                <button class="btn btn-circle" title="Close" onclick="document.querySelector('.search-bar').classList.remove('show')">
+                                    <i class="ph ph-x"></i>
+                                </button>
+                            </div>
+
+                            <div>
+                              <button class="btn btn-circle" title="Search with your voice">
+                                  <i class="ph ph-microphone"></i>
+                              </button>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="d-none d-lg-block">
+                                <button class="btn btn-circle bg-transparent" onclick="document.querySelector('.search-bar').classList.add('show')" title="search">
+                                    <i class="ph ph-magnifying-glass"></i>
+                                </button>
+                            </div>
+
+                            <div class="d-xs-none">
+                              <button class="btn btn-circle bg-transparent" title="Video">
+                                  <i class="ph ph-video-camera"></i>
+                              </button>
+                          </div>
+
+                            <div class="d-xs-none">
+                                <button class="btn btn-circle bg-transparent" title="Notification">
+                                    <i class="ph ph-bell"></i>
+                                </button>
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="btn btn-circle bg-transparent dropdown-toggle" title="Profile">
+                                    <i class="ph ph-user"></i>
+                                </button>
+                                
+
+                                  <ul class="dropdown-menu">
+                                    <li class="dropdown-item">
+                                      <a class="dropdown-link" href="">Login</a>
+                                    </li>
+
+                                    <li class="dropdown-item">
+                                      <a class="dropdown-link" href="">Register</a>
+                                    </li>
+
+                                    <li class="dropdown-item d-none d-xs-block">
+                                      <a class="dropdown-link" href="">Create Video</a>
+                                    </li>
+
+                                    <li class="dropdown-item d-none d-xs-block">
+                                      <a class="dropdown-link" href="">Notifications</a>
+                                    </li>
+                                  </ul>
+
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="video">
+                <div>
+                    <video controls class="main-vid">
+                            <source src="./assets/Videos/Friends_ Joey Tries to Hide His New Job as a Waiter (Season 6 Clip) _ TBS.mp4"/>
+                            Your browser does not support the video tag.
+                        </video>
+                </div>
+
+                <div class="vid-title">Joey got a new job at Central Park| Friends</div>
+                
+                <div>
+                    <div class="d-flex gap-3">
+                        
+                        <div class="vid-user-img">
+                            <i class="ph ph-user-circle"></i>
+                        </div> 
+                        <div>
+                            <div><a href="#" class="vid-sub-title">Friends</a></div>
+                            <div class="vid-sub-no">1.5k Subscribers</div>
+                        </div>
+                        
+                        <div class="button">
+                            <button class="button">Subscribe</button>
+                        </div>
+                    </div>
+                    
+
+                    <div class="d-flex align-items-center gap-3">
+                        <button class="btn-2 p-1">
+                            <i class="ph ph-thumbs-up"></i>
+                            
+                            <div class="icon-txt">
+                                1.3K Likes |
+                            </div>
+                            
+                            <i class="ph ph-thumbs-down"></i>
+                        </button>
+
+                        <button class="btn-2">
+                            <i class="ph ph-share-fat"></i>
+
+                            <div class="icon-txt">
+                                Share
+                            </div>
+                        </button>
+
+                        <button class="btn-2">
+                            <i class="ph ph-arrow-line-down"></i>
+
+                            <div class="icon-txt">
+                                Download
+                            </div>
+                        </button>
+
+                        <button class="btn-2">
+                            <i class="ph ph-list-plus"></i>
+
+                            <div class="icon-txt">
+                                Save
+                            </div>
+                        </button>
+
+                        <button class="btn-2">
+                            <i class="ph ph-scissors"></i>
+                            
+                            <div class="icon-txt">
+                                Clip
+                            </div>
+                        </button>
+
+                        <button class="btn-2">
+                            <i class="ph ph-dots-three"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="description">
+                <div>
+                    <p class="bio gap-3">
+                        951,486 views  Jul 28, 2022  #MattLeBlanc #JenniferAniston #LisaKudrow
+                        <br>Ross becomes fixated with completing the Name All Fifty States game before he allows himself to eat any of Thanksgiving dinner. 
+                        <br>Chandler wants to make Monica happy and goes over to Ross’ place to bring the dog back, and when it’s not there he thinks the dog escaped. 
+                        <br>But Phoebe and Monica have already snuck the dog back to the apartment.
+                        <br> Joey accidentally reveals Rachel’s crush on Tag. Later on Tag returns his feelings for Rachel and they share a kiss in the hall. Watch more Friends on TBS.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mycomments">
+
+                <label for="search" class="vid-user-img">
+                    <i class="ph ph-user-circle"></i>
+                </label>
+                
+                <input type="search" name="search" id="search" class="comment-bar" placeholder="Add a comment"/>
+            </div>
+               
+                
+            <div class="comment">
+                <div class="d-flex gap-3 com-gap">
+                    <div class="user-pfp"><i class="ph ph-user-circle"></i></div>
+                    <div>
+                        <div class="com-user-id">Chandler Bing <span class="com-time">2 months ago</span> </div>  
+                        <div class="com-text">So where was Rachel? we didn't saw her</div>
+                        <div class="d-flex gap-3">
+                            <div class="com-icon"><i class="ph ph-thumbs-up"></i></div>
+                            <div class="com-like">5</div>
+                            <div class="com-icon-2"><i class="ph ph-thumbs-down"></i></div>
+                            <a href="#" class="com-reply">Reply</a>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="d-flex gap-3 com-gap">
+                    <div class="user-pfp"><i class="ph ph-user-circle"></i></div>
+                    <div>
+                        <div class="com-user-id">Chandler Bing <span class="com-time">2 months ago</span> </div>  
+                        <div class="com-text">So where was Rachel? we didn't saw her</div>
+                        <div class="d-flex gap-3">
+                            <div class="com-icon"><i class="ph ph-thumbs-up"></i></div>
+                            <div class="com-like">5</div>
+                            <div class="com-icon-2"><i class="ph ph-thumbs-down"></i></div>
+                            <a href="#" class="com-reply">Reply</a>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="d-flex gap-3 com-gap">
+                    <div class="user-pfp"><i class="ph ph-user-circle"></i></div>
+                    <div>
+                        <div class="com-user-id">Chandler Bing <span class="com-time">2 months ago</span> </div>  
+                        <div class="com-text">So where was Rachel? we didn't saw her</div>
+                        <div class="d-flex gap-3">
+                            <div class="com-icon"><i class="ph ph-thumbs-up"></i></div>
+                            <div class="com-like">5</div>
+                            <div class="com-icon-2"><i class="ph ph-thumbs-down"></i></div>
+                            <a href="#" class="com-reply">Reply</a>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="d-flex gap-3 com-gap ">
+                    <div class="user-pfp"><i class="ph ph-user-circle"></i></div>
+                    <div>
+                        <div class="com-user-id">Chandler Bing <span class="com-time">2 months ago</span> </div>  
+                        <div class="com-text">So where was Rachel? we didn't saw her</div>
+                        <div class="d-flex gap-3">
+                            <div class="com-icon"><i class="ph ph-thumbs-up"></i></div>
+                            <div class="com-like">5</div>
+                            <div class="com-icon-2"><i class="ph ph-thumbs-down"></i></div>
+                            <a href="#" class="com-reply">Reply</a>
+                        </div>
+                    </div> 
+                </div>
+                
+            </div>
+
+            <div class="side-vid">
+                <div class="d-flex gap-3">
+                     <img src="./assets/images/71b8faa2f1d45ba119c60ce7760b0873.jpg"class="side-vid-img" >
+                    <div class="side-vid-text">
+                       <div class="side-vid-title">Joey and Chandler sandwich fight</div>
+                       <div class="sv">Friends</div>
+                       <div class="sv">20 Views . 1 week ago</div>
+                    </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <img src="./assets/images/71b8faa2f1d45ba119c60ce7760b0873.jpg"class="side-vid-img" >
+                   <div class="side-vid-text">
+                      <div class="side-vid-title">Joey and Chandler sandwich fight</div>
+                      <div class="sv">Friends</div>
+                      <div class="sv">20 Views . 1 week ago</div>
+                   </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <img src="./assets/images/71b8faa2f1d45ba119c60ce7760b0873.jpg"class="side-vid-img" >
+                   <div class="side-vid-text">
+                      <div class="side-vid-title">Joey and Chandler sandwich fight</div>
+                      <div class="sv">Friends</div>
+                      <div class="sv">20 Views . 1 week ago</div>
+                   </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <img src="./assets/images/71b8faa2f1d45ba119c60ce7760b0873.jpg"class="side-vid-img" >
+                   <div class="side-vid-text">
+                      <div class="side-vid-title">Joey and Chandler sandwich fight</div>
+                      <div class="sv">Friends</div>
+                      <div class="sv">20 Views . 1 week ago</div>
+                   </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <img src="./assets/images/71b8faa2f1d45ba119c60ce7760b0873.jpg"class="side-vid-img" >
+                   <div class="side-vid-text">
+                      <div class="side-vid-title">Joey and Chandler sandwich fight</div>
+                      <div class="sv">Friends</div>
+                      <div class="sv">20 Views . 1 week ago</div>
+                   </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <img src="./assets/images/71b8faa2f1d45ba119c60ce7760b0873.jpg"class="side-vid-img" >
+                   <div class="side-vid-text">
+                      <div class="side-vid-title">Joey and Chandler sandwich fight</div>
+                      <div class="sv">Friends</div>
+                      <div class="sv">20 Views . 1 week ago</div>
+                   </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <img src="./assets/images/71b8faa2f1d45ba119c60ce7760b0873.jpg"class="side-vid-img" >
+                   <div class="side-vid-text">
+                      <div class="side-vid-title">Joey and Chandler sandwich fight</div>
+                      <div class="sv">Friends</div>
+                      <div class="sv">20 Views . 1 week ago</div>
+                   </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <img src="./assets/images/71b8faa2f1d45ba119c60ce7760b0873.jpg"class="side-vid-img" >
+                   <div class="side-vid-text">
+                      <div class="side-vid-title">Joey and Chandler sandwich fight</div>
+                      <div class="sv">Friends</div>
+                      <div class="sv">20 Views . 1 week ago</div>
+                   </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <img src="./assets/images/71b8faa2f1d45ba119c60ce7760b0873.jpg"class="side-vid-img" >
+                   <div class="side-vid-text">
+                      <div class="side-vid-title">Joey and Chandler sandwich fight</div>
+                      <div class="sv">Friends</div>
+                      <div class="sv">20 Views . 1 week ago</div>
+                   </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <img src="./assets/images/71b8faa2f1d45ba119c60ce7760b0873.jpg"class="side-vid-img" >
+                   <div class="side-vid-text">
+                      <div class="side-vid-title">Joey and Chandler sandwich fight</div>
+                      <div class="sv">Friends</div>
+                      <div class="sv">20 Views . 1 week ago</div>
+                   </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <img src="./assets/images/71b8faa2f1d45ba119c60ce7760b0873.jpg"class="side-vid-img" >
+                   <div class="side-vid-text">
+                      <div class="side-vid-title">Joey and Chandler sandwich fight</div>
+                      <div class="sv">Friends</div>
+                      <div class="sv">20 Views . 1 week ago</div>
+                   </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <img src="./assets/images/71b8faa2f1d45ba119c60ce7760b0873.jpg"class="side-vid-img" >
+                   <div class="side-vid-text">
+                      <div class="side-vid-title">Joey and Chandler sandwich fight</div>
+                      <div class="sv">Friends</div>
+                      <div class="sv">20 Views . 1 week ago</div>
+                   </div>
+                </div>
+            </div>
+    
+        </main>
+
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>
